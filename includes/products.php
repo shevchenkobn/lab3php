@@ -6,32 +6,30 @@
  * Time: 17:53
  */
 
-public class product
+class product
 {
     public $name;
-    public $ageLimits;
+    public $description;
     public $price;
-    public function __constructor($name, $ageLimits, $price)
+    public function __constructor($name, $description, $price)
     {
-            if (!is_array($ageLimits) || count($ageLimits) <= 2
-             || !is_int($ageLimits[0]) || !is_int($ageLimits[1])
-             || $ageLimits[0] < 3 || $ageLimits[0] > 200
-             || $ageLimits[1] < 3 || $ageLimits[1] > 200)
-                throw new InvalidArgumentException("Bad age limits");
+        if (!is_string($description))
+                throw new InvalidArgumentException('$description is not a string');
             if (!is_string($name))
                 throw new InvalidArgumentException('$name is not a string');
             if (!(is_double($price) || is_int($price)))
-                throw new InvalidArgumentException('$price is not a double or an integer');
+                throw new InvalidArgumentException('$price is not a double nor an integer');
             $this->name = $name;
             $this->price = $price;
-            $this->ageLimits = $ageLimits;
+            $this->description = $description;
     }
 }
 
-$goods = array(
-    new product("Pomidori", array(3, 200), 4.55),
-    new product("Syr","age" => "2 ", "price" => 34.84, "number" => 666),
-    new product("Alcohol 120%","age" => "18 ", "price" => .99, "number" => 29),
-    new product("Slon","age" => "16 65", "price" => 109.87, "number" => 94),
-    new product("Kvartira","age" => "18 ", "price" => 33.55, "number" => 3),
-    new product("Khleb","age" => "3 7", "price" => "14.02", "number" => 123));
+return array(
+    new product("Pomidori", "Predpolozhitelno krasniye", 4.55),
+    new product("Syr", "Kak 'sir', tolko 'syr'", 34.84),
+    new product("Alcohol 120%", "Ya garantiruyu", .99),
+    new product("Slon", "Nikto yego ne hochet :C", 109.87),
+    new product("Kvartira", "A vot yeyo vse hotyat", 33.55),
+    new product("Khleb", "<no_comments>", 14.02));
+?>
