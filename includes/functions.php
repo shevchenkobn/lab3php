@@ -33,7 +33,8 @@ function render($template, $values = array())
     {
         extract($values);
         require("../templates/header.php");
-        require("../templates/$template");
+        $templatePath = "../templates/$template";
+        require($templatePath);
         require("../templates/footer.php");
     }
     else
