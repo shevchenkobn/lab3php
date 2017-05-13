@@ -6,4 +6,12 @@
  * Time: 17:04
  */
 include("./includes/config.php");
+if ($_SERVER["REQUEST_METHOD"] == "GET")
+{
+
+}
+elseif ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+
+}
 ?>

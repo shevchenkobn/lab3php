@@ -5,3 +5,10 @@
  * Date: 13.05.17
  * Time: 17:48
  */
+?>
+            <footer>
+
+            </footer>
+        <div/>
+    <body/>
+<html/>
