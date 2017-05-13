@@ -5,6 +5,5 @@
  * Date: 13.05.17
  * Time: 17:04
  */
-$goods = require("./includes");
-
+include("./includes/config.php");
 ?>
