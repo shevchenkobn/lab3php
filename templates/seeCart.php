@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-xs-2"></div>
     <div class="col-xs-8">
-        <? if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION["cart"])
+        <?php if (session_status() == PHP_SESSION_ACTIVE && isset($_SESSION["cart"])
          && count($_SESSION["cart"]) > 0): ?>
             <div class="table-responsive">
                 <form method="POST" action="cart.php?action=delete">
@@ -22,7 +22,7 @@
                             <th>Sum</th>
                             <th></th>
                         </tr>
-                        <? foreach ($_SESSION["cart"] as $i=>$product):?>
+                        <?php foreach ($_SESSION["cart"] as $i=>$product):?>
                             <tr>
                                 <td><?= $i?></td>
                                 <td><?= $product["item"]->name?></td>
@@ -40,14 +40,14 @@
                     <button type="submit" value="all" class="btn-info">Clear</button>
                 </form>
             </div>
-        <? else: ?>
+        <?php else: ?>
             <div class="jumbotron">
                 <a href="index.php" role="button" class="btn btn-primary">
                     <h1>Go to shopping page</h1>
                 </a>
                 <p>You haven't bought anything</p>
             </div>
-        <? endif; ?>
+        <?php endif; ?>
     </div>
     <div class="col-xs-2"></div>
 </div>

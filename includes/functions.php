@@ -29,13 +29,13 @@ function redirect($destination)
 
 function render($template, $values = array())
 {
-    if (file_exists("../templates/$template"))
+    if (file_exists("./templates/$template"))
     {
         extract($values);
-        require("../templates/header.php");
-        $templatePath = "../templates/$template";
+        require("./templates/header.php");
+        $templatePath = "./templates/$template";
         require($templatePath);
-        require("../templates/footer.php");
+        require("./templates/footer.php");
     }
     else
     {

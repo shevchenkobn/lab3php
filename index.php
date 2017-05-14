@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET")
     if (isset($_GET["reload"]) == "mistakes")
     {
         // TODO: bootstrap alert product with mistake
-        render("./templates/shopping.php", array("title" => "Input mistakes"));
+        render("shopping.php", array("title" => "Input mistakes", "goods" => $goods));
     }
     else
-        render("./templates/shopping.php", array("title" => "Buying products"));
+        render("shopping.php", array("title" => "Buying products", "goods" => $goods));
 }
 elseif ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -42,6 +42,6 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
                 break;
         }
     else
-        render("./templates/shopping.php", array("title" => "Buying products"));
+        render("shopping.php", array("title" => "Buying products", "goods" => $goods));
 }
 ?>

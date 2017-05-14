@@ -6,9 +6,9 @@
  * Time: 18:49
  */
 include("./includes/config.php");
-if ($_SERVER["REQUEST_METHOD"] == "GET" && session_status() == PHP_SESSION_ACTIVE)
+if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
-    render("seeCart.php");
+    render("seeCart.php", array("goods" => $goods));
 }
 elseif ($_SERVER["REQUEST_METHOD"] == "POST")
 {

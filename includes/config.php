@@ -7,6 +7,7 @@
  */
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include_once("./functions.php");
-$goods = include("./products.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/includes/functions.php");
+$goods = include($_SERVER["DOCUMENT_ROOT"]."/includes/products.php");
+
 ?>
