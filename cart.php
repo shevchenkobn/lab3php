@@ -5,7 +5,7 @@
  * Date: 13.05.17
  * Time: 18:49
  */
-include($_SERVER["DOCUMENT_ROOT"]."/includes/config.php");
+include($_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']."/includes/config.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     render("seeCart.php", array("goods" => $goods));
