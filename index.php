@@ -29,7 +29,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
                         $_SESSION["cart"] = array();
                     }
                     foreach ($_POST as $prodInd=>$prodNum) {
-                        if (!is_numeric($prodNum) || ($prodNum = intval($prodNum)) < 0)
+                        if ($prodNum != '' || !is_numeric($prodNum) || ($prodNum = intval($prodNum)) < 0)
                             redirect("index.php?reload=mistakes&index=$prodInd");
                         $prodInd = intval($prodInd);
                         if (isset($_SESSION["cart"][$prodInd]))
