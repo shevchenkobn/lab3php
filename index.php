@@ -5,7 +5,7 @@
  * Date: 13.05.17
  * Time: 17:04
  */
-include("./includes/config.php");
+include($_SERVER["DOCUMENT_ROOT"]."/includes/config.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     if (isset($_GET["reload"]) == "mistakes")
@@ -44,4 +44,5 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
     else
         render("shopping.php", array("title" => "Buying products", "goods" => $goods));
 }
+
 ?>
