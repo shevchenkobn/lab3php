@@ -8,9 +8,9 @@
 ?>
 <div class="row">
     <div class="col-sm-3"></div>
-    <div class="col-sm-6 col-xs-12">
+    <div class="col-sm-6">
         <div class="table-responsive">
-            <form method="POST" action="index.php?action=buy">
+            <form method="post" action="./index.php?action=buy">
                 <table class="table table-striped table-hover">
                     <tr class="info">
                         <th>Name</th>

@@ -23,7 +23,7 @@
                             </a></li>
                     </ul>
                 </nav>
-                <div class="well well-sm"><p>Copyleft Bogdan Shevchenko.</p>
+                <div class="well well-sm text-center"><p>Copyleft Bogdan Shevchenko.</p>
                 <p>All rights unreserved.</p></div>
             </footer>
         <div/>
