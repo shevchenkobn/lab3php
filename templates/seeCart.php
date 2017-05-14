@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-xs-2"></div>
     <div class="col-xs-8">
-        <?php if (count($_SESSION) > 0 && isset($_SESSION["cart"])
+        <?php if (isset($_SESSION) && isset($_SESSION["cart"])
          && count($_SESSION["cart"]) > 0): ?>
             <div class="table-responsive">
                 <form method="POST" action="cart.php?action=delete">

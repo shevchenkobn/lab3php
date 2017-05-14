@@ -23,7 +23,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             case "buy":
                 {
-                    if (count($_SESSION) != 0)
+                    if (!isset($_SESSION))
                     {
                         session_start();
                         $_SESSION["cart"] = array();
