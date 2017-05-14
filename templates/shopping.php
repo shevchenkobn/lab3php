@@ -23,13 +23,13 @@
                     </tr>
                     <?php foreach ($goods as $i=>$product):?>
                         <tr>
-                            <td><?= $product->name?></td>
-                            <td><?= $product->description?></td>
-                            <td><?= number_format($product->price, 2)?></td>
+                            <td><?php echo $product->name?></td>
+                            <td><?php echo $product->description?></td>
+                            <td><?php echo number_format($product->price, 2)?></td>
                             <td>
                                 <a href="#" data-toggle="tooltip" data-placement="bottom"
                                    title="Number of product to buy">
-                                    <input name="<?=$i?>" class="form-control"
+                                    <input name="<?php echo $i?>" class="form-control"
                                            title="Number of product to buy" type="number" min="0">
                                 </a>
                             </td>

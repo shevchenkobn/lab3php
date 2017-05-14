@@ -23,7 +23,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             case "buy":
                 {
-                    if (session_status() != PHP_SESSION_ACTIVE)
+                    if (count($_SESSION) != 0)
                     {
                         session_start();
                         $_SESSION["cart"] = array();

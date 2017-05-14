@@ -18,11 +18,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="<?=dirname($_SERVER["PHP_SELF"])?>/css/styles.css">
-        <script src="<?=dirname($_SERVER["PHP_SELF"])?>/js/script.js"></script>
+        <script src="<?php echo dirname($_SERVER["PHP_SELF"])?>/js/script.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <title><?= isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
+        <title><?php echo isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
                 : "BogdanVIPshop"?></title>
     </head>
     <body>
@@ -80,6 +80,6 @@
             </nav>
             <div class="container">
                 <div class="jumbotron">
-                    <h1 class="text-center"><?= isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
+                    <h1 class="text-center"><?php echo isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
                             : "BogdanVIPshop"?></h1>
                 </div>

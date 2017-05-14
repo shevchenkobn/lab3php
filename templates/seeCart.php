@@ -24,14 +24,14 @@
                         </tr>
                         <?php foreach ($_SESSION["cart"] as $i=>$product):?>
                             <tr>
-                                <td><?= $i?></td>
-                                <td><?= $product["item"]->name?></td>
-                                <td><?= number_format($product["item"]->price, 2)?></td>
-                                <td><?= $product["count"]?></td>
-                                <td><?= number_format(
+                                <td><?php echo $i?></td>
+                                <td><?php echo $product["item"]->name?></td>
+                                <td><?php echo number_format($product["item"]->price, 2)?></td>
+                                <td><?php echo $product["count"]?></td>
+                                <td><?php echo number_format(
                                     $product["item"]->price * $product["count"],
                                     2)?></td>
-                                <td><button type="submit" value="<?= $i?>" class="btn-info">
+                                <td><button type="submit" value="<?php echo $i?>" class="btn-info">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button></td>
                             </tr>

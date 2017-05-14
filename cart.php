@@ -19,6 +19,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
             if ($_POST["submit"] == "all")
             {
                 unset($_SESSION["cart"]);
+                $_SESSION = array();
                 session_destroy();
                 redirect("index.php");
             }
