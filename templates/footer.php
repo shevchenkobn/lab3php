@@ -6,28 +6,28 @@
  * Time: 17:48
  */
 ?>
-            <footer>
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="index.php">BogdanVIPshop</a>
-                        </div>
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.php">
-                                    <span class="glyphicon glyphicon-home"></span> Home
-                                </a></li>
-                            <li><a href="index.php">
-                                    <span class="glyphicon glyphicon-menu-hamburger"></span> Products
-                                </a></li>
-                            <li><a href="cart.php">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Cart
-                                </a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="well well-sm text-center"><p>Copyleft Bogdan Shevchenko.</p>
-                <p>All rights unreserved.</p></div>
-            </footer>
         <div/>
+        <footer>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.php">BogdanVIPshop</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.php">
+                                <span class="glyphicon glyphicon-home"></span> Home
+                            </a></li>
+                        <li><a href="index.php">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span> Products
+                            </a></li>
+                        <li><a href="cart.php">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Cart
+                            </a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="well well-sm text-center"><p>Copyleft Bogdan Shevchenko.</p>
+            <p>All rights unreserved.</p></div>
+        </footer>
     <body/>
 <html/>

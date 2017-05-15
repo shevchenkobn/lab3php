@@ -36,8 +36,8 @@
                                     </button></td>
                             </tr>
                         <?php endforeach;?>
-                        <tr class="active">
-                            <td colspan="4"></td>
+                        <tr class="success">
+                            <td colspan="4">Total sum:</td>
                             <td><?php echo number_format($total, 2)?></td>
                             <td>
                                 <button type="submit" name="item" value="all" class="btn btn-info">Clear</button>
