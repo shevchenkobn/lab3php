@@ -7,7 +7,7 @@
  */
 ?>
 <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="col-bg-8 col-bg-offset-2 col-md-10 col-md-offset-1">
         <?php if (isset($_SESSION) && isset($_SESSION["cart"])
          && count($_SESSION["cart"]) > 0): ?>
             <div class="table-responsive">

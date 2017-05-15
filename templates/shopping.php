@@ -7,7 +7,7 @@
  */
 ?>
 <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="col-bg-6 col-bg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <div class="table-responsive">
             <form method="post" action="./index.php?action=buy">
                 <table class="table table-striped table-hover">
@@ -26,11 +26,8 @@
                             <td><?php echo $product->description?></td>
                             <td><?php echo number_format($product->price, 2)?></td>
                             <td>
-                                <a href="#" data-toggle="tooltip" data-placement="bottom"
-                                   title="Number of product to buy">
-                                    <input name="<?php echo $i?>" class="form-control"
-                                           title="Number of product to buy" type="number" min="1">
-                                </a>
+                                <input name="<?php echo $i?>" class="form-control"
+                                       title="Number of product to buy" type="number" min="1">
                             </td>
                         </tr>
                     <?php endforeach;?>
@@ -41,3 +38,8 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('input[type="number"]').tooltip({'trigger': 'focus', 'placement': 'bottom'});
+    });
+</script>
