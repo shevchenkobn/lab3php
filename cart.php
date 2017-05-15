@@ -18,7 +18,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if ($_GET["action"] == "delete")
         {
-            if ($_POST["submit"] == "all")
+            if ($_POST["item"] == "all")
             {
                 unset($_SESSION["cart"]);
                 $_SESSION = array();
@@ -27,7 +27,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
             }
             else
             {
-                unset($_SESSION["cart"][intval($_POST["submit"])]);
+                unset($_SESSION["cart"][intval($_POST["item"])]);
                 redirect("cart.php");
             }
         }
