@@ -35,7 +35,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href= href="index.php">
+                            <li class="active"><a href="index.php">
                                     <span class="glyphicon glyphicon-home"></span> Home
                                 </a></li>
                             <li><a href="index.php">

@@ -12,7 +12,7 @@
                         <a class="navbar-brand" href="index.php">BogdanVIPshop</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href= href="index.php">
+                        <li class="active"><a href="index.php">
                                 <span class="glyphicon glyphicon-home"></span> Home
                             </a></li>
                         <li><a href="index.php">

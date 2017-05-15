@@ -21,20 +21,28 @@
                             <th>Sum</th>
                             <th></th>
                         </tr>
-                        <?php foreach ($_SESSION["cart"] as $i=>$product):?>
+                        <?php $total = 0;
+                        foreach ($_SESSION["cart"] as $i=>$product):?>
                             <tr>
                                 <td><?php echo $i?></td>
                                 <td><?php echo $product["item"]->name?></td>
                                 <td><?php echo number_format($product["item"]->price, 2)?></td>
                                 <td><?php echo $product["count"]?></td>
-                                <td><?php echo number_format(
-                                    $product["item"]->price * $product["count"],
-                                    2)?></td>
+                                <td><?php $sum = $product["item"]->price * $product["count"];
+                                    $total += $sum;
+                                    echo number_format($sum, 2); ?></td>
                                 <td><button type="submit" name="item" value="<?php echo $i?>" class="btn btn-info">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button></td>
                             </tr>
                         <?php endforeach;?>
+                        <tr class="active">
+                            <td colspan="4"></td>
+                            <td><?php echo number_format($total, 2)?></td>
+                            <td>
+                                <button type="submit" name="item" value="all" class="btn btn-info">Clear</button>
+                            </td>
+                        </tr>
                     </table>
                     <button type="submit" name="item" value="all" class="btn btn-info">Clear</button>
                 </form>
