@@ -30,13 +30,13 @@
                                 <td><?php echo number_format(
                                     $product["item"]->price * $product["count"],
                                     2)?></td>
-                                <td><button type="submit" value="<?php echo $i?>" class="btn-info">
+                                <td><button type="submit" value="<?php echo $i?>" class="btn btn-info">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </button></td>
                             </tr>
                         <?php endforeach;?>
                     </table>
-                    <button type="submit" value="all" class="btn-info">Clear</button>
+                    <button type="submit" value="all" class="btn btn-info">Clear</button>
                 </form>
             </div>
         <?php else: ?>

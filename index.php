@@ -33,6 +33,8 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
                             continue;
                         if (!is_numeric($prodNum) || ($prodNum = intval($prodNum)) < 0)
                             redirect("index.php?reload=mistakes&index=$prodInd");
+                        if ($prodNum == 0)
+                            continue;
                         $prodInd = intval($prodInd);
                         if (isset($_SESSION["cart"][$prodInd]))
                             $_SESSION["cart"][$prodInd]["count"] += $prodNum;

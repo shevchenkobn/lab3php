@@ -29,7 +29,7 @@
                                 <a href="#" data-toggle="tooltip" data-placement="bottom"
                                    title="Number of product to buy">
                                     <input name="<?php echo $i?>" class="form-control"
-                                           title="Number of product to buy" type="number" min="0">
+                                           title="Number of product to buy" type="number" min="1">
                                 </a>
                             </td>
                         </tr>

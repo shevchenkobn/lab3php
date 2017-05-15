@@ -7,6 +7,8 @@
  */
 include("./includes/config.php");
 session_start();
+var_dump($_POST);
+var_dump($_SESSION);
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     render("seeCart.php", array("goods" => $goods));
