@@ -7,8 +7,7 @@
  */
 ?>
 <div class="row">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-8">
+    <div class="col-xs-8 col-xs-offset-2">
         <?php if (isset($_SESSION) && isset($_SESSION["cart"])
          && count($_SESSION["cart"]) > 0): ?>
             <div class="table-responsive">
@@ -41,13 +40,12 @@
                 </form>
             </div>
         <?php else: ?>
-            <div class="jumbotron">
-                <a href="index.php" role="button" class="btn btn-primary">
+            <div class="jumbotron text-center">
+                <a href="index.php">
                     <h1>Go to shopping page</h1>
                 </a>
                 <p>You haven't bought anything</p>
             </div>
         <?php endif; ?>
     </div>
-    <div class="col-xs-2"></div>
 </div>

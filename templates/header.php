@@ -26,33 +26,7 @@
                 : "BogdanVIPshop"?></title>
     </head>
     <body>
-
-
-            <!--<nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.php">BogdanVIPshop</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href= href="index.php">
-                                    <span class="glyphicon glyphicon-home"></span> Home
-                                </a></li>
-                            <li><a href="index.php">
-                                    <span class="glyphicon glyphicon-menu-hamburger"></span> Products
-                                </a></li>
-                            <li><a href="cart.php">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Cart
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>-->
+        <header>
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -78,8 +52,9 @@
                     </div>
                 </div>
             </nav>
-            <div class="container">
-                <div class="jumbotron">
-                    <h1 class="text-center"><?php echo isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
-                            : "BogdanVIPshop"?></h1>
-                </div>
+            <div class="jumbotron">
+                <h1 class="text-center"><?php echo isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
+                        : "BogdanVIPshop"?></h1>
+            </div>
+        </header>
+        <div class="container">

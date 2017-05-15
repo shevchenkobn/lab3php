@@ -7,8 +7,7 @@
  */
 ?>
 <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 col-sm-offset-3">
         <div class="table-responsive">
             <form method="post" action="./index.php?action=buy">
                 <table class="table table-striped table-hover">
@@ -41,5 +40,4 @@
             </form>
         </div>
     </div>
-    <div class="col-sm-3"></div>
 </div>

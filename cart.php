@@ -6,6 +6,7 @@
  * Time: 18:49
  */
 include("./includes/config.php");
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     render("seeCart.php", array("goods" => $goods));

@@ -23,9 +23,9 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             case "buy":
                 {
-                    if (!isset($_SESSION))
+                    session_start();
+                    if (!isset($_SESSION["cart"]))
                     {
-                        session_start();
                         $_SESSION["cart"] = array();
                     }
                     foreach ($_POST as $prodInd=>$prodNum) {
