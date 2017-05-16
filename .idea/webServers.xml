@@ -10,6 +10,14 @@
           <option name="port" value="8022" />
         </fileTransfer>
       </webServer>
+      <webServer id="ce79b4c2-6676-4891-afc1-2805ccd515c2" name="lab4php" url="https://software.nure.ua:8443/scripts/pzpi-16-3-shevchenko-bohdan/lab4php">
+        <fileTransfer host="software.nure.ua" port="8022" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="8022" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

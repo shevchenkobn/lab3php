@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="https://software.nure.ua">
+  <component name="PublishConfigData" serverName="lab4php">
     <serverData>
       <paths name="https://software.nure.ua">
         <serverdata>
           <mappings>
             <mapping deploy="/home/pzpi-16-3-shevchenko-bohdan/php" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lab4php">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/pzpi-16-3-shevchenko-bohdan/php/lab4php" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
