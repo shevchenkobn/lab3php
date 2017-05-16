@@ -33,7 +33,7 @@
                     <?php endforeach;?>
                 </table>
                 <!-- TODO implement js check with dismissable alerts -->
-                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                <button type="submit" class="btn btn-block btn-primary">Buy!</button>
             </form>
         </div>
     </div>

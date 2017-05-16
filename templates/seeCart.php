@@ -44,7 +44,7 @@
                             </td>
                         </tr>
                     </table>
-                    <button type="submit" name="item" value="all" class="btn btn-info">Clear</button>
+                    <button type="submit" name="item" value="all" class="btn btn-info">Buy</button>
                 </form>
             </div>
         <?php else: ?>
