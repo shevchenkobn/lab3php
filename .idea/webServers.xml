@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="632ebd0e-4b9f-4f3c-91ec-7f048f8dc65e" name="https://software.nure.ua" url="http://software.nure.ua">
+      <webServer id="632ebd0e-4b9f-4f3c-91ec-7f048f8dc65e" name="https://software.nure.ua" url="https://software.nure.ua:8443/scripts/pzpi-16-3-shevchenko-bohdan/">
         <fileTransfer host="software.nure.ua" port="8022" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
