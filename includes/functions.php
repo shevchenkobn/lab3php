@@ -41,4 +41,5 @@ function render($template, $values = array())
     {
         trigger_error("Invalid template: $template", E_USER_ERROR);
     }
+    exit;
 }

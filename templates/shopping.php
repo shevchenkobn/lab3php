@@ -9,7 +9,7 @@
 <div class="row">
     <div class="col-bg-6 col-bg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <div class="table-responsive">
-            <form method="post" action="./index.php?action=buy">
+            <form method="post" action="./buyProduct.php?action=buy">
                 <table class="table table-striped table-hover">
                     <tr class="info">
                         <th>Name</th>
