@@ -9,23 +9,24 @@
 <div class="row">
     <div class="col-sm-3">
         <img class="img-thumbnail img-responsive"
-             src="<?php $dirPath = $_SERVER["DOCUMENT_ROOT"]."/imgs/";
+             src="<?php $dirPath = "imgs/";
                 echo file_exists($dirPath.$_SESSION["id"]) ? $dirPath.$_SESSION["id"] : $dirPath."noavatar.png"?>"
              alt="Your avatar" title="Your avatar">
-    </div>
-    <div class="form-group">
-        <form action="profile.php" method="post">
-            <label class="sr-only" for="selectFile">Change avatar:</label>
-            <div class="input-group" id="selectFile">
-                <label class="input-group-btn">
-                        <span class="btn btn-primary">
-                            Browse&hellip; <input type="file" name="avatar" accept="image/*" style="display: none;">
-                        </span>
-                </label>
-                <input type="text" class="form-control" readonly>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Submit</button>
-        </form>
+        <div class="form-group">
+            <form action="profile.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="avatar" accept="image/*">
+<!--                <label for="selectFile">Change avatar:</label>-->
+<!--                <div class="input-group" id="selectFile">-->
+<!--                    <label class="input-group-btn">-->
+<!--                        <span class="btn btn-primary">-->
+<!--                            Browse&hellip; <input type="file" name="avatar" accept="image/*" style="display: none;">-->
+<!--                        </span>-->
+<!--                    </label>-->
+<!--                    <input type="text" class="form-control" readonly>-->
+<!--                </div>-->
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
     </div>
     <div class="col-sm-9">
         <div class="row">
@@ -48,16 +49,17 @@
 </div>
 <script>
 $(document).ready( function() {
-    $(':file').on('fileselect', function(event, numFiles, label) {
+    $(':file').on('fileselect', function (event, numFiles, label) {
 
         var input = $(this).parents('.input-group').find(':text'),
             log = numFiles > 1 ? numFiles + ' files selected' : label;
 
-        if( input.length ) {
+        if (input.length) {
             input.val(log);
         } else {
-            if( log ) alert(log);
+            if (log) alert(log);
         }
 
-    });
+    })
+});
 </script>

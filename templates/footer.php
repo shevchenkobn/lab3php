@@ -17,7 +17,7 @@
                         <li class="active"><a href="index.php">
                                 <span class="glyphicon glyphicon-home"></span> Home
                             </a></li>
-                        <li><a href="index.php">
+                        <li><a href="shopping.php">
                                 <span class="glyphicon glyphicon-menu-hamburger"></span> Products
                             </a></li>
                         <li><a href="cart.php">
