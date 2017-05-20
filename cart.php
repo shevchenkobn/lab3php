@@ -9,7 +9,7 @@ include("./includes/config.php");
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
-    render("seeCart.php", array("title" => "See cart", "goods" => $goods));
+    redirect("index.php?page=cart");
 }
 elseif ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -27,7 +27,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
             {
                 unset($_SESSION["cart"][intval($_POST["item"])]);
             }
-            redirect("cart.php");
+            redirect("index.php?page=cart");
         }
     }
 }

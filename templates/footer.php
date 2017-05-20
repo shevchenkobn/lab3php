@@ -24,6 +24,14 @@
                                 <span class="glyphicon glyphicon-shopping-cart"></span> Cart
                             </a></li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="<?php echo !isset($_SESSION) ? "login.php" : "logout.php"?>">
+                                <span class="glyphicon glyphicon-log-
+                                    <?php echo !isset($_SESSION) ? "out" : "in"?>
+                                "></span> <?php
+                                    echo !isset($_SESSION) ? "Login" : "Logout"?>
+                            </a>
+                        </li>
                 </div>
             </nav>
             <div class="well well-sm text-center"><p>Copyleft Bogdan Shevchenko.</p>

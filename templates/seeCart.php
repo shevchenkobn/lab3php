@@ -49,7 +49,7 @@
             </div>
         <?php else: ?>
             <div class="jumbotron text-center">
-                <a href="index.php">
+                <a href="shopping.php">
                     <h1>Go to shopping page</h1>
                 </a>
                 <p>You haven't bought anything</p>

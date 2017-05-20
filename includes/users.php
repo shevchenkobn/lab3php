@@ -9,15 +9,19 @@ class user
 {
     public $name;
     public $pass;
-    function __construct($n, $p)
+    public $description;
+    function __construct($name, $password, $description)
     {
-        if (!is_string($n))
+        if (!is_string($name))
             throw new InvalidArgumentException("Wrong name");
-        $name = $n;
-        if (!is_string(pn))
+        $this->name = $name;
+        if (!is_string($password))
             throw new InvalidArgumentException("Wrong password");
-        $pass = $p;
+        $this->pass = $password;
+        if (!is_string($description))
+            throw new InvalidArgumentException("Wrong password");
+        $this->description = $description;
     }
 }
 
-return array(new user("test", "123"));
+return array(new user("Bogdan", "123", "This is my account"));

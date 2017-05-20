@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && $_GET["page"] == 'cart')
         render("shopping.php", array("title" => "Input mistakes", "goods" => $goods));
     }
     else
-        render("shopping.php", array("title" => "Buying products", "goods" => $goods));
+        redirect("index.php?page=shopping");
 }
 elseif ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -32,7 +32,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
                     if ($prodNum == '')
                         continue;
                     if (!is_numeric($prodNum) || ($prodNum = intval($prodNum)) < 0)
-                        redirect("index.php?reload=mistakes&index=$prodInd");
+                        redirect("shopping.php?reload=mistakes&index=$prodInd");
                     if ($prodNum == 0)
                         continue;
                     $prodInd = intval($prodInd);
@@ -47,7 +47,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
                 break;
         }
     else
-        render("shopping.php", array("title" => "Buying products", "goods" => $goods));
+        redirect("index.php?page=shopping");
 }
 else
     redirect("index.php");
