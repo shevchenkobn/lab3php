@@ -25,11 +25,14 @@
                             </a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo !isset($_SESSION) ? "login.php" : "logout.php"?>">
-                                <span class="glyphicon glyphicon-log-
-                                    <?php echo !isset($_SESSION) ? "out" : "in"?>
-                                "></span> <?php
-                                    echo !isset($_SESSION) ? "Login" : "Logout"?>
+                        <?php if (isset($_SESSION['id']) || isset($_SESSION['user'])): ?>
+                            <li><a href="profile.php">
+                                    <span class="glyphicon glyphicon-user"></span> Profile
+                                </a></li>
+                        <?php endif; ?>
+                        <li><a href="<?php echo empty($_SESSION) ? "login.php" : "logout.php"?>">
+                                <span class="glyphicon glyphicon-log-<?php echo !empty($_SESSION) ? "out" : "in"?>"></span> <?php
+                                    echo empty($_SESSION) ? "Login" : "Logout"?>
                             </a>
                         </li>
                 </div>

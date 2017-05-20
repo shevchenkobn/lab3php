@@ -5,9 +5,11 @@
  * Date: 13.05.17
  * Time: 17:04
  */
+include("./includes/config.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     if (isset($_GET["page"]))
+    {
         switch ($_GET["page"])
         {
             case "cart":
@@ -25,8 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET")
             default:
                 break;
         }
+    }
     else
+    {
         render("start.php", array("title" => "Wellcome!"));
+    }
 }
 else
     redirect("index.php");

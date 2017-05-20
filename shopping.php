@@ -6,7 +6,7 @@
  * Time: 16:43
  */
 include("./includes/config.php");
-if ($_SERVER["REQUEST_METHOD"] == "GET" && $_GET["page"] == 'cart')
+if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     if (isset($_GET["reload"]) == "mistakes")
     {

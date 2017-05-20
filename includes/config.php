@@ -10,12 +10,9 @@ ini_set('display_errors', 1);
 include_once("./includes/functions.php");
 $goods = include("./includes/products.php");
 $users = include("./includes/users.php");
-if (!preg_match($_SERVER['PHP_SELF'], '/^/?(login|index)\.php$/'))
+session_start();
+if (!preg_match('%/(login|index)\.php$%', $_SERVER['PHP_SELF'])
+    && empty($_SESSION) || empty($_SESSION)) {
     render('mustLogin.php', array('title' => "Login problem :("));
-else {
-    session_start();
-    if (!(isset($_SESSION) && isset($_SESSION['id'])
-    && key_exists($_SESSION['id'], $users) && isset($_SESSION['user'])))
-        render('mustLogin.php', array('title' => "Login problem :("));
 }
 ?>

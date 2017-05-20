@@ -7,7 +7,7 @@
  */
 ?>
 <div class="jumbotron text-center">
-    <?php if(isset($_SESSION)):?>
+    <?php if(empty($_SESSION)):?>
         <a href="login.php">
             <h1>Go to login page</h1>
         </a>

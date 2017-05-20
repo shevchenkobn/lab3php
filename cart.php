@@ -6,7 +6,6 @@
  * Time: 18:49
  */
 include("./includes/config.php");
-session_start();
 if ($_SERVER["REQUEST_METHOD"] == "GET")
 {
     redirect("index.php?page=cart");
@@ -20,8 +19,6 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
             if ($_POST["item"] == "all")
             {
                 unset($_SESSION["cart"]);
-                $_SESSION = array();
-                session_destroy();
             }
             else
             {
