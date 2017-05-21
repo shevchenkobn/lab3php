@@ -60,7 +60,7 @@
                                     </a></li>
                                 <?php endif; ?>
                             <?php endif; ?>
-                            <li><a href="<?php echo !isset($_SESSION) ? "login.php" : "logout.php"?>">
+                            <li><a href="<?php echo empty($_SESSION) ? "login.php" : "logout.php"?>">
                                     <span class="glyphicon glyphicon-log-<?php echo !empty($_SESSION) ? "out" : "in"?>"></span> <?php
                                     echo empty($_SESSION) ? "Login" : "Logout"?></a>
                             </li>

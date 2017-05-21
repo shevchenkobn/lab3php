@@ -7,9 +7,13 @@
  */
 class user
 {
-    public $name;
+    public $login;
     public $pass;
-    public $description;
+    public $avatar_path; //last used
+    public $name; //strlen >= 1
+    public $surname;  //strlen >= 1
+    public $age; // int!!!, > 16
+    public $description; //strlen >= 50
     function __construct($name, $password, $description)
     {
         if (!is_string($name))

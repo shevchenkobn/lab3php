@@ -10,7 +10,7 @@ class product
     public $name;
     public $description;
     public $price;
-    function __constructor($name, $description, $price)
+    function __construct($name, $description, $price)
     {
         if (!is_string($description))
                 throw new InvalidArgumentException('$description is not a string');
@@ -21,18 +21,6 @@ class product
             $this->name = $name;
             $this->price = $price;
             $this->description = $description;
-    }
-    function product($name, $description, $price)
-    {
-        if (!is_string($description))
-            throw new InvalidArgumentException('$description is not a string');
-        if (!is_string($name))
-            throw new InvalidArgumentException('$name is not a string');
-        if (!(is_double($price) || is_int($price)))
-            throw new InvalidArgumentException('$price is not a double nor an integer');
-        $this->name = $name;
-        $this->price = $price;
-        $this->description = $description;
     }
 }
 

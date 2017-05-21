@@ -31,7 +31,6 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
     if (isset($error))
         render("login_tpl.php", array("title" => "Some problems :(", "error" => $error));
     elseif (isset($id)) {
-        session_start();
         $_SESSION['id'] = $id;
         $_SESSION['user'] = $users[$id];
         redirect("index.php");

@@ -8,9 +8,13 @@
 ?>
 <div class="row">
     <div class="col-sm-3">
-        <img class="img-thumbnail img-responsive"
-             src="<?php $dirPath = "imgs/";
-                echo file_exists($dirPath.$_SESSION["id"]) ? $dirPath.$_SESSION["id"] : $dirPath."noavatar.png"?>"
+        <img class="img-thumbnail img-responsive img-center"
+             src="<?php $avatar_name = md5($_SESSION['id']);
+                 $imgs_dir = realpath((__DIR__ == '/' ? __DIR__ : __DIR__.'/').'../imgs/').'/';
+                 $pattrn = $imgs_dir.$avatar_name.".*";
+                 $suitable_files = glob($imgs_dir.$avatar_name.".*");
+                 echo count($suitable_files) ? 'imgs/'.basename($suitable_files[0]) : 'imgs/noavatar.png';
+             ?>"
              alt="Your avatar" title="Your avatar">
         <div class="form-group">
             <form action="profile.php" method="post" enctype="multipart/form-data">

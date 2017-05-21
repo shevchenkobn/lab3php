@@ -43,3 +43,10 @@ function render($template, $values = array())
     }
     exit;
 }
+
+function update_database_lol($users)
+{
+    $file = fopen(__DIR__."/database_lol.json", 'w');
+    fwrite($file, json_encode($users));
+    fclose($file);
+}
