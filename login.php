@@ -14,8 +14,8 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     foreach ($users as $user)
     {
-        if ($user->name == $_POST['login'])
-            if ($user->pass == $_POST['password'])
+        if ($user->login == $_POST['login'])
+            if ($user->password == $_POST['password'])
             {
                 $id = array_search($user, $users);
             }

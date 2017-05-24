@@ -69,7 +69,7 @@
                 </div>
             </nav>
             <div class="jumbotron">
-                <h1 class="text-center"><?php echo isset($title) ? "BogdanVIPshop: ".htmlspecialchars($title)
+                <h1 class="text-center"><?php echo isset($title) ? htmlspecialchars($title)
                         : "BogdanVIPshop"?></h1>
             </div>
         </header>
